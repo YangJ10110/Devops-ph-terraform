@@ -59,6 +59,8 @@ resource "aws_s3_bucket" "terraform_state" {
 
 This resource enables versioning on the S3 bucket to ensure that multiple versions of the Terraform state can be maintained.
 
+References: [S3-TERRAFORM-LOCALSTACK](https://docs.localstack.cloud/tutorials/s3-static-website-terraform/)
+
 ```hcl
 resource "aws_s3_bucket_versioning" "terraform_bucket_versioning" {
   bucket = aws_s3_bucket.terraform_state.id
