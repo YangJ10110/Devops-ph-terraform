@@ -121,8 +121,18 @@ Here’s a shorter version with examples:
 5. **Command Line (`-var` or `-var-file`):** Override variables directly via CLI.
     
     ```bash
-    terraform apply -var="region=eu-central-1"
-    terraform apply -var-file="variables.tfvars"
+    terraform apply -var="db_user=my_user" -var="dp_pass=THISISNOTSECURE"
+    terraform apply -var-file="another-variable-file.tfvars"
+    ```
+
+6. **Sensitive Data**: Ensures the data are marked for values that needs to be handled with security  
+
+    ```hcl
+    variable "db_pass" {
+      description = "password for database"
+      type        = string
+      sensitive   = true
+    }
     ```
 
 
