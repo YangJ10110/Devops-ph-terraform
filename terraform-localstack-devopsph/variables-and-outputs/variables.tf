@@ -24,6 +24,21 @@ variable "db_user" {
   default     = "foo"
 }
 
+variable "db_name" {
+  description = "name of database"
+  type        = string
+  default     = "mydb"
+}
+
+variable "domain" {
+  description = "domain name for the web app"
+  type        = string
+}
+
+variable "bucket_prefix" {
+  description = "prefix for the s3 bucket"
+  type        = string
+}
 variable "db_pass" {
   description = "password for database"
   type        = string
