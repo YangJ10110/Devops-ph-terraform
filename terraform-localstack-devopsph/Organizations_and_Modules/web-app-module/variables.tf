@@ -52,3 +52,8 @@ variable "domain" {
   type        = string
 }
 
+variable "dns_zone_id" {
+  description = "The DNS Zone ID for the Route 53 DNS Zone"
+  type        = string
+  default     = null
+}
